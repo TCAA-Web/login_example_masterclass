@@ -2,6 +2,7 @@ import { MainLayout } from './layouts/MainLayout'
 import { HomePage } from './pages/HomePage'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { LoginPage } from './pages/LoginPage'
+import { CreateUserPage } from './pages/CreateUserPage'
 
 // The plan
 // Vi skal lave en router med forskellige sider - CHECK
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<MainLayout/>}>
               <Route index element={<HomePage/>}/>
               <Route path="/login" element={<LoginPage/>}/>
+              <Route path="/create" element={<CreateUserPage/>}/>
           </Route>
         </Routes>
       </Router>

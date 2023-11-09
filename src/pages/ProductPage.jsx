@@ -5,6 +5,7 @@ export const ProductPage = () => {
   const [data, setData] = useState([]);
   const {user} = useContext(UserContext)
 
+  // useEffect der henter data fra API når komponentet mounter
   useEffect(() => {
     let url = "http://localhost:3000/posters/list_by_genre/drama";
     fetch(url)
@@ -12,6 +13,7 @@ export const ProductPage = () => {
       .then((data) => setData(data));
   }, []);
 
+  // funktion til at tilføje til cart
   const addToCart = (_id, _name) => {
     if (user){
         const body = new URLSearchParams()
@@ -32,15 +34,13 @@ export const ProductPage = () => {
     }
   }
 
-  console.log(data);
-
   return (
     <div>
       <h1>Posters:</h1>
       {data &&
-        data.map((item) => {
+        data.map((item, index) => {
           return (
-            <div style={{display: "grid", gridTemplateColumns: "4fr 1fr"}}>
+            <div key={index} style={{display: "grid", gridTemplateColumns: "4fr 1fr"}}>
               <p>{item.name}</p>
               <button onClick={() => addToCart(item.id, item.name)}>Add to cart</button>
             </div>

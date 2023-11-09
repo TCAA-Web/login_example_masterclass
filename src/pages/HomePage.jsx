@@ -3,10 +3,10 @@ import { UserContext } from "../context/userContext"
 
 export const HomePage = () => {
 
+    // Henter user fra usercontext
     const {user} = useContext(UserContext)
 
-    console.log(user)
-
+    // Viser brugerens navn hvis vedkommende er logget ind
     return (
         <>
         <h1>Homepage</h1>

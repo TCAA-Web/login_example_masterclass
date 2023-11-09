@@ -19,12 +19,10 @@ export const CreateUserPage = () => {
       body.append("lastname", lastName);
       body.append("email", email);
       body.append("password", password);
-      body.append('active', true)
-      body.append('org_id', 1)
-      body.append('refresh_token', 1234)
-      body.append('groups', 1)
-
-      console.log("body", ...body)
+      body.append("is_active", true);
+      body.append("org_id", 1);
+      body.append("refresh_token", 1234);
+      body.append("groups", 1);
 
       const options = {
         body: body,
@@ -34,8 +32,7 @@ export const CreateUserPage = () => {
       fetch(url, options)
         .then((res) => res.json())
         .then((data) => console.log(data));
-    } 
-    else {
+    } else {
       setError("Udfyld venligst alle felter");
     }
   };
@@ -55,7 +52,11 @@ export const CreateUserPage = () => {
           name="lastname"
           placeholder="Enter your lastname"
         />
-        <InputField type="email" name="email" placeholder="Enter your email" />
+        <InputField 
+          type="email" 
+          name="email" 
+          placeholder="Enter your email" 
+        />
         <InputField
           type="password"
           name="password"

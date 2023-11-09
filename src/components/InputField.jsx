@@ -7,16 +7,17 @@
  */
 export const InputField = (props) => {
     return (
-        <>
-            <label 
+        <div style={{display: 'grid', gridTemplateRows: "1fr 1fr"}}>
+            <label
                 htmlFor={props.name}>
                     {props.name}
             </label> 
             <input 
+                autoComplete="on"
                 name={props.name} 
                 type={props.type} 
                 placeholder={props.placeholder} 
             />
-        </>
+        </div>
     )
 }

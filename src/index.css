@@ -5,14 +5,24 @@ body {
   align-items: center;
   justify-content: center;
   width: 100vw;
+  background-color: #222;
+  color: white;
+  box-sizing: border-box;
 }
 
 h1 {
   text-align: center;
 }
 
+a{
+  color: white;
+  text-decoration: none;
+}
+
 ul{
   display: grid; 
   justify-content: start;
   align-items: start;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr;
 }

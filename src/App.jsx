@@ -3,7 +3,6 @@ import { HomePage } from './pages/HomePage'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { LoginPage } from './pages/LoginPage'
 import { CreateUserPage } from './pages/CreateUserPage'
-
 // The plan
 // Vi skal lave en router med forskellige sider - CHECK
 // Man skal kunne navigere til en login side - CHECK
